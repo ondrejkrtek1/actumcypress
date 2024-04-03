@@ -6,4 +6,4 @@ describe('template spec', () => {
 
 
 let test1 : string = 'zadek'
-test1 = 'prdel'
+test1 = 'prdell'
