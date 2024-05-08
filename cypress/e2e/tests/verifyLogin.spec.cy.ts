@@ -23,5 +23,5 @@ describe('POM Test', () => {
         loginObj.clickSubmit();
         loginObj.elements.errorTxt().should('contain','Enter your userName and password correct');
     });
+    
 });
-

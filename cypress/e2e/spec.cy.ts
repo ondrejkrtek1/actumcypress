@@ -86,6 +86,10 @@ describe('Fills in the required fields and submits the form', () => {
   });
 });
 
+
+
+
+
 /* describe('template spec', () => {
   it('passes', () => {
     //cy.visit('src/index.html')
@@ -103,3 +107,4 @@ describe('template spec', () => {
   })
 })
 */
+
