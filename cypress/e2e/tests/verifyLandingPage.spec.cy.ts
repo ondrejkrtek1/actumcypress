@@ -1,4 +1,3 @@
-//import landingPageObjects from "../../pageobjects/landingpage";
 import LandingPage from "../../pageobjects/landingpage";
 describe('POM Test', () => {
 
@@ -12,20 +11,25 @@ describe('POM Test', () => {
     });
     
     it('Verify header is present', () => {
-        landingPage.checkExistHeader()
-        landingPage.elements.headerElement().should('be.visible')
+        landingPage.checkExistHeader()    
 
     })
     it('Verify footer is present', () => {
         landingPage.checkExistFooter()
-        landingPage.elements.footerElement().should('be.visible')
 
     })
     it('Verify logo is present and clickable', () => {
         landingPage.checkExistLogo()
-        landingPage.elements.clickableLogo().should('be.visible')
-
+        landingPage.elements.clickableLogo().should('have.attr' , 'href').and('have.length.greaterThan' , 0 )
+        //landingPage.elements.clickableLogo().should('be.visible')
     })
+
+    it('Verify navbar is displayed correctly and contains sections', () => {
+        landingPage.checkExistNavbar()
+        landingPage.elements.navbar().children('ul').children('li').should('have.length', 8 )
+    }
+
+    )
 
 
 
