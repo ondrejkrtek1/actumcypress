@@ -54,5 +54,16 @@ describe('POM Test', () => {
     it('Verify categories list are displayed and present on the page' , () => {
         landingPage.checkExistCategoriesList()
     })
+    it('Verifies categories and its sub-categories' , () => {
+        landingPage.checkExistCategoriesList()
+        cy.get('.list-group #itemc').contains('Phones').should('be.visible')
+        cy.get('.list-group #itemc').contains('Laptops').should('be.visible')
+        cy.get('.list-group #itemc').contains('Monitors').should('be.visible')
+    })
+    it('Verify that body is displayed correctly and next and previous buttons are visible' , () => {
+        landingPage.checkExistBody()
+        landingPage.elements.next().should('be.visible')
+        landingPage.elements.previous().should('be.visible')
+    })
 });
 

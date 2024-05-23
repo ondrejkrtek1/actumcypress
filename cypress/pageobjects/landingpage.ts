@@ -10,8 +10,14 @@ export default class LandingPage{
         carouselNextArrow : () => cy.get('.carousel-control-next-icon'),
         carouselItem : () => cy.get('.carousel-item'),
         carouselItemActive : () => cy.get('.carousel-item.active'),
-        categories : () => cy.get('.list-group')
-
+        categories : () => cy.get('.list-group'),
+        // categories for each name
+        // categoriesPhones : () => cy.get('.list-group #itemc').contains('Phones').should('be.visible'),
+        // categoriesLaptops : () => cy.get('.list-group #itemc').contains('Laptops').should('be.visible'),
+        // categoriesMonitors : () => cy.get('.list-group #itemc').contains('Monitors').should('be.visible'),
+        body : () => cy.get('#tbodyid'),
+        previous : () => cy.get('#prev2'),
+        next : () => cy.get('#next2')
     }
     
 
@@ -45,5 +51,9 @@ export default class LandingPage{
     checkExistCategoriesList()
     {
         this.elements.categories().should('be.visible')
+    }
+    checkExistBody()
+    {
+        this.elements.body().should('be.visible')
     }
 }
