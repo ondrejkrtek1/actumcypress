@@ -54,6 +54,9 @@ export default class LandingPage{
     }
     checkExistBody()
     {
-        this.elements.body().should('be.visible')
+        return this.elements.body().should('be.visible').then(()=> {
+            this.elements.next().should('be.visible')
+            this.elements.previous().should('be.visible')
+        })
     }
 }
