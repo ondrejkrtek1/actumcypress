@@ -1,13 +1,13 @@
 import { When, Then, Given } from "@badeball/cypress-cucumber-preprocessor";
 
-Given("I am on empty home page", () => {
+Given("I visit a page", () => {
     cy.visit('https://www.demoblaze.com/index.html')
 })
 
-When("I type and submit in the board name", () => {
+When("I load the page", () => {
     cy.get('#narvbarx')
 })
 
-Then("I should be redirected to the board detail", () => {
+Then("I should see the header", () => {
     cy.get('#narvbarx').should('be.visible')
 })

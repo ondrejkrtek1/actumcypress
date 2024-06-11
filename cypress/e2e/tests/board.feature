@@ -1,6 +1,6 @@
-Feature: Board functionality
+Feature: Plank test
 
-    Scenario: Create a board
-        Given I am on empty home page
-        When I type and submit in the board name
-        Then I should be redirected to the board detail
+    Scenario: Visit a page and check header
+        Given I visit a page
+        When I load the page
+        Then I should see the header
