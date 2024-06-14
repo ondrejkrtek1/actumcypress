@@ -4,3 +4,8 @@ Feature: Plank test
         Given I visit a page
         When I load the page
         Then I should see the header
+
+    Scenario: Druhý test
+        Given Brekeke
+        When Mekeke
+        Then Bukake

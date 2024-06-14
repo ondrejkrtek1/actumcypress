@@ -10,5 +10,25 @@
   "dependencies": {
     "@badeball/cypress-cucumber-preprocessor": "^20.0.6",
     "@bahmutov/cypress-esbuild-preprocessor": "^2.2.1"
-  }
+  },
+    "cypress-cucumber-preprocessor": {
+      "messages": {
+        "enabled": true,
+        "output": "./reports/cucumber-messages.ndjson"
+      },
+      "html": {
+        "enabled": true,
+        "output": "./reports/html/index.html"
+      },
+      "stepDefinitions": [
+        "cypress/step-definitions/**/*.steps.{js,ts}",
+        "cypress/e2e/[filepath]/**/*.{js,ts}",
+        "cypress/e2e/[filepath].{js,ts}"
+      ],
+      "filterSpecs": true,
+      "omitFiltered": true,
+      "nonGlobalStepDefinitions": false
+    }
+    
+  
 }
