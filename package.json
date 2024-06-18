@@ -21,9 +21,7 @@
         "output": "./reports/html/index.html"
       },
       "stepDefinitions": [
-        "cypress/step-definitions/**/*.steps.{js,ts}",
-        "cypress/e2e/[filepath]/**/*.{js,ts}",
-        "cypress/e2e/[filepath].{js,ts}"
+        "cypress/step-definitions/**/*.steps.{js,ts}"
       ],
       "filterSpecs": true,
       "omitFiltered": true,
