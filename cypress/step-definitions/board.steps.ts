@@ -21,9 +21,13 @@ Given('Brekeke', () => {
 })
 
 When("Mekeke", () => {
-    cy.get('#narvbarx')
+    cy.get('#footc')
 })
 
 Then("Bukake", () => {
-    landingPage.checkExistHeader()
+    landingPage.checkExistFooter()
+})
+
+Given('Ondra', () => {
+    cy.log('something')
 })
